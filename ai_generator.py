@@ -10,8 +10,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
-AFF_LINK_1 = "https://example.com/affiliate1"
-AFF_LINK_2 = "https://example.com/affiliate2"
+AFF_LINK_1 = "hhttps://en.wikipedia.org/wiki/Cat"
+AFF_LINK_2 = "https://en.wikipedia.org/wiki/Dog"
 
 
 def generate_blog_post(keyword, seo_data):
