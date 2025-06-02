@@ -1,11 +1,17 @@
 # AI Blog Generator (Interview Project)
 
-# AI Blog Generator
-This project is a simple blog post generator that uses OpenAI's API to create content based on user-defined keywords. It also includes a mock SEO data generator and a Streamlit interface for easy interaction.
+## AI Blog Generator with Flask & OpenAI
+This project is a simple blog post generator that uses OpenAI's API to create content based on user-defined keywords. 
+It also includes a mock SEO data generator and a **Streamlit** interface for easy interaction.
 
-git clone https://github.com/<your-username>/ai-blog-generator-flask.git
-cd ai-blog-generator-flask
 
+```
+git clone https://github.com/eeraanjum13/ai-blog-generator-interview-SadiaAnjum_BRACUniversity.git
+cd ai-blog-generator-interview-SadiaAnjum_BRACUniversity
+```
+
+# Setup Environment
+```
 python -m venv venv
 source venv/bin/activate        # On macOS/Linux
 venv\Scripts\activate           # On Windows
@@ -18,6 +24,7 @@ Create a file named .env:
 
 OPENAI_API_KEY=your_real_openai_key
 
+
 # Run the Flask App
 
 python app.py
@@ -28,10 +35,12 @@ python app.py
 # Flask API
 GET /generate?keyword=your+keyword+here
 ```
+
 You should see a response with the json structure containing the generated blog post, SEO data and the keyword.
-```
+
 
 # Generate and Save Blog Post
+
 ```python
 flask run app.py
 ```
@@ -43,7 +52,7 @@ This should run the Scheduler and generate a blog post every 10 seconds (or your
 
 scheduler.add_job(lambda: generate_and_save("wireless earbuds"), "interval", seconds=10)
 ```
-Please replace the interval with your desired time frame.
+Please replace the interval with your desired time frame. 
 
 
 This is a simple SEO + OpenAI-powered blog post generator using Streamlit.
