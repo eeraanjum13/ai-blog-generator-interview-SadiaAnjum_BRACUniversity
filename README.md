@@ -1,4 +1,7 @@
 # AI Blog Generator (Interview Project)
+Try it out here with Streamlit UI : https://aibloggenerator11.streamlit.app/
+
+Don't worry, we can do the Flask end-point as well.
 
 ## AI Blog Generator with Flask & OpenAI
 This project is a simple blog post generator that uses OpenAI's API to create content based on user-defined keywords. 
@@ -11,6 +14,7 @@ cd ai-blog-generator-interview-SadiaAnjum_BRACUniversity
 ```
 
 # Setup Environment
+
 ```
 python -m venv venv
 source venv/bin/activate        # On macOS/Linux
@@ -20,15 +24,16 @@ pip install -r requirements.txt
 
 # Add your OpenAI API key
 
+```
 Create a file named .env:
 
 OPENAI_API_KEY=your_real_openai_key
-
+```
 
 # Run the Flask App
-
+```
 python app.py
-
+```
 
 # Generate a blog post : 
 ```bash
