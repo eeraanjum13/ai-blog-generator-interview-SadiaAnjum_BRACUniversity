@@ -13,8 +13,8 @@ def generate_and_save(keyword):
     print(f"[{datetime.now()}] Running blog generator for: {keyword}")
     try:
         seo_data = get_seo_data(keyword)
-        # content = generate_blog_post(keyword, seo_data)
-        content = '# Sample content for demonstration purposes\n'
+        content = generate_blog_post(keyword, seo_data)
+        # content = '# Sample content for demonstration purposes\n'
         filename = f"{saved_folder}/{keyword.replace(' ', '_')}_{datetime.now().date()}.md"
         with open(filename, "w") as f:
             f.write(content)
@@ -27,8 +27,8 @@ def generate_and_save(keyword):
 def generate():
     keyword = request.args.get("keyword", "wireless earbuds") # Default keyword
     seo_data = get_seo_data(keyword)
-    # content = generate_blog_post(keyword, seo_data)
-    content = '# Sample content for demonstration purposes\n'
+    content = generate_blog_post(keyword, seo_data)
+    # content = '# Sample content for demonstration purposes\n'
     return jsonify({
         "keyword": keyword,
         "seo_data": seo_data,

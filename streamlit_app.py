@@ -27,8 +27,8 @@ keyword = st.text_input("Enter a keyword", value="wireless earbuds")
 if st.button("Generate Blog Post"):
     with st.spinner("Generating..."):
         seo = get_seo_data(keyword)
-        # blog = generate_blog_post(keyword, seo)
-        blog = '# Sample content for demonstration purposes\n'
+        blog = generate_blog_post(keyword, seo)
+        # blog = '# Sample content for demonstration purposes\n'
         filename = f"{saved_folder}/{keyword.replace(' ', '_')}_{datetime.now().date()}.md"
         with open(filename, "w") as f:
             f.write(blog)
