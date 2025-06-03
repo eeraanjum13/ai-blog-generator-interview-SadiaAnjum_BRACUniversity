@@ -22,12 +22,17 @@ def generate_blog_post(keyword, seo_data):
     - Keyword difficulty: {seo_data['keyword_difficulty']}
     - Average CPC: ${seo_data['avg_cpc']}
 
+    AFFILIATE LINKS:
+    - AFF_LINK_1 = "hhttps://en.wikipedia.org/wiki/Cat"
+    - AFF_LINK_2 = "https://en.wikipedia.org/wiki/Dog"
+    
+
     The post should be structured with:
     - A headline
     - An intro
     - At least 3 subheadings
     - A conclusion
-    - At least 2 placeholders like {{AFF_LINK_1}} and {{AFF_LINK_2}} for affiliate links.
+    - The affliate links provided should be included as hyperlinks in the content. Pretend like the links are real affiliate links.
 
     Format: Markdown
     """
