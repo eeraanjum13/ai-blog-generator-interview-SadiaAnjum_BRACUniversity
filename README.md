@@ -35,10 +35,31 @@ OPENAI_API_KEY=your_real_openai_key
 python app.py
 ```
 
-# Generate a blog post : 
+# For fast testing, you can run the test.py for POST and GET requests.
+
+First run: 
+
+```bash
+flask run 
+```
+
+```
+python test.py
+```
+
+
+# Manually test GET & POST requests: 
 ```bash
 # Flask API
 GET /generate?keyword=your+keyword+here
+```
+For POST
+
+```bash
+curl -X POST http://localhost:5000/generate \
+     -H "Content-Type: application/json" \
+     -d '{"keyword": "wireless earbuds"}'
+
 ```
 
 You should see a response with the json structure containing the generated blog post, SEO data and the keyword.
