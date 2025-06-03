@@ -48,9 +48,9 @@ def generate():
 
 
 # Schedule daily job
-# scheduler = BackgroundScheduler()
-# scheduler.add_job(lambda: generate_and_save("wireless earbuds"), "interval", seconds=20)
-# scheduler.start()
+scheduler = BackgroundScheduler()
+scheduler.add_job(lambda: generate_and_save("wireless earbuds"), "interval", seconds=20)
+scheduler.start()
 
 if __name__ == "__main__":
     app.run(debug=True)
