@@ -1,4 +1,4 @@
-from get_seo_data import get_seo_data
+# from get_seo_data import get_seo_data
 
 # keyword = "wireless headphones"
 # seo_data = get_seo_data(keyword)
