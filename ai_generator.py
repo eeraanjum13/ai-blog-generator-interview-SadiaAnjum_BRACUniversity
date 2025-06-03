@@ -23,8 +23,8 @@ def generate_blog_post(keyword, seo_data):
     - Average CPC: ${seo_data['avg_cpc']}
 
     AFFILIATE LINKS:
-    - AFF_LINK_1 = "hhttps://en.wikipedia.org/wiki/Cat"
-    - AFF_LINK_2 = "https://en.wikipedia.org/wiki/Dog"
+    - AFF_LINK_1 = "https://www.w3.org/Provider/Style/dummy.html"
+    - AFF_LINK_2 = "https://www.w3.org/Provider/Style/dummy.html"
     
 
     The post should be structured with:
