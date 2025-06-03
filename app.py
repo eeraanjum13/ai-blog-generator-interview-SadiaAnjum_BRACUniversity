@@ -23,22 +23,34 @@ def generate_and_save(keyword):
         print(f"❌ Error in scheduler: {e}")
 
 
-@app.route("/generate")
+@app.route('/generate', methods=['GET', 'POST'])
 def generate():
-    keyword = request.args.get("keyword", "wireless earbuds") # Default keyword
+    if request.method == 'GET':
+        keyword = request.args.get("keyword")
+    elif request.method == 'POST':
+        data = request.get_json()
+        keyword = data.get("keyword") if data else None
+    else:
+        return jsonify({"error": "Unsupported method"}), 405
+
+    if not keyword:
+        return jsonify({"error": "keyword is required"}), 400
+
     seo_data = get_seo_data(keyword)
     content = generate_blog_post(keyword, seo_data)
-    # content = '# Sample content for demonstration purposes\n'
+
+
     return jsonify({
         "keyword": keyword,
-        "seo_data": seo_data,
-        "blog_post": content
+        "seo": seo_data,
+        "blog_content": content
     })
 
+
 # Schedule daily job
-scheduler = BackgroundScheduler()
-scheduler.add_job(lambda: generate_and_save("wireless earbuds"), "interval", seconds=20)
-scheduler.start()
+# scheduler = BackgroundScheduler()
+# scheduler.add_job(lambda: generate_and_save("wireless earbuds"), "interval", seconds=20)
+# scheduler.start()
 
 if __name__ == "__main__":
     app.run(debug=True)
